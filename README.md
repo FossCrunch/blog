@@ -1,5 +1,3 @@
-# Blog
-Blogger
-"Welcome to FossCrunch"
+# Jekyll code samples
 
-Everything about technology you should know..!
+FossCrunch
