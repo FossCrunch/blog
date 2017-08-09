@@ -1,3 +1,0 @@
-baseurl: /jekyll
-exclude: ['README.md']
-permalink: pretty
