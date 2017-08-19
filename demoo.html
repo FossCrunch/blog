@@ -131,7 +131,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <!-- slide content  -->
 
 
-      <div class="slideshow-container">
+      <div class="slideshow-container slide">
 
       <div class="mySlides fade">
         <div class="slidenumbertext">1 / 3</div>
@@ -321,6 +321,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 
 <script>
+
+var slideIndex = 0;
+showSlides();
+
+
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -335,8 +340,7 @@ function w3_close() {
 
 //slide    script
 
-var slideIndex = 0;
-showSlides();
+
 
 function showSlides() {
     var i;
