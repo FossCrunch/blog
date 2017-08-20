@@ -1,6 +1,6 @@
 markdown: kramdown
 exclude: ['README.md']
-baseurl: /
+baseurl: 
 plugins:
    - jekyll-paginate
 
