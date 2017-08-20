@@ -1,91 +1,133 @@
-<!DOCTYPE html>
-
-<html>
-
-<title>Foss Crunch</title>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+---
+layout: default
+---
 
 
-<style>
 
-body,h1 {font-family: "Raleway", sans-serif}
 
-body, html {height: 100%}
 
-.bgimg {
 
-    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
 
-    min-height: 100%;
+<!-- --------------------------------------------------------------- -->
 
-    background-position: center;
 
-    background-size: cover;
+<!-- slider -->
+<div class="slideshow-container body2 w3-margin-top w3-padding">
 
-}
-
-</style>
-
-<body>
-
-​
-
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-
-    <img src="pic/logg.png" style="width:100px; " >
+  <div class="mySlides fade">
+    <div class="slidenumbertext">1 / 3</div>
+    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+    <div class="slidetext">Caption Text</div>
   </div>
 
-
-
-  <div class="w3-display-middle">
-
-    <h1 class="w3-xxxlarge w3-animate-top w3-hide-large w3-center">LAUNCHING</h1>
-    <h1 class="w3-xxxlarge w3-animate-top w3-hide-large w3-center">SOON</h1>
-
-
-    <h1 class="w3-xxxlarge w3-animate-top w3-hide-small">LAUNCHING SOON</h1>
-
-
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-
-
-    <div class="w3-large w3-center w3-panel">
-    <a href="https://www.facebook.com/fosscrunch/">   <i class="fa fa-facebook-official w3-hover-opacity "></i></a>
-    <a href="https://twitter.com/FossCrunchOff"><i class="fa fa-twitter w3-hover-opacity w3-margin-left"></i> </a> 
-    <a href="https://www.instagram.com/fosscrunch/"> <i class="fa fa-instagram w3-hover-opacity w3-margin-left"></i> </a> 
-
-    </div>
-
-
-      <hr class="w3-border-grey" style="margin:auto;width:40%">
-
-
-    <p class="w3-large w3-center">with Love Foss Crunch</p>
-
+  <div class="mySlides fade">
+    <div class="slidenumbertext">2 / 3</div>
+    <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" style="width:100%">
+    <div class="slidetext">Caption Two</div>
   </div>
 
-  
-
+  <div class="mySlides fade">
+    <div class="slidenumbertext">3 / 3</div>
+    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+    <div class="slidetext">Caption Three</div>
   </div>
 
 </div>
+<br>
 
-​
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
 
-</body>
+<hr>
 
-</html>
 
-​
 
+
+
+
+
+<!-- Post Grid-->
+
+
+{% assign rows = paginator.posts.size | divided_by: 3.0 | ceil %}
+{% for i in (1..rows) %}
+{% assign offset = forloop.index0 | times: 3 %}
+<div class="w3-row-padding">
+ {% for post in site.posts limit:3 offset:offset %}
+
+ <div class="w3-third w3-container w3-margin-bottom">
+  <img src="{{ post.image }}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+  <div class="w3-container w3-white">
+    <p><b>{{ post.title }}</b></p>
+    <p>{{ post.meta }}</p>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+{% endfor %}
+
+
+<!-- Pagination -->
+<div class="w3-center">
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous w3-button w3-black w3-margin">Previous</a>
+    
+    {% endif %}
+    <span class="page_number w3-margin">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next w3-button w3-black w3-margin">Next</a>
+    {% endif %}
+  </div>
+  
+</div>
+
+
+
+<!-- Bottom -------------------------------------------------------------- -->
+
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+   slides[i].style.display = "none";  
+ }
+ slideIndex++;
+ if (slideIndex> slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+  }
+
+  </script>
+
+
+
+  
