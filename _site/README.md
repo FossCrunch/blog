@@ -1,3 +1,0 @@
-# Jekyll code samples
-
-FossCrunch
