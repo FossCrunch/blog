@@ -86,8 +86,7 @@
     .text {font-size: 11px}
   }
 
-  #mySidebar {
-    height: 100px;
+  .bgc {
     background: red; /* For browsers that do not support gradients */        
     background: -webkit-linear-gradient(180deg, #B24592, #F15F79); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(180deg, #B24592, #F15F79); /* For Opera 11.1 to 12.0 */
@@ -112,7 +111,7 @@
 
   <!-- Sidebar/menu -->
   <div class="w3-hide-large">
-    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left bgc " style="z-index:3;width:100%;" id="mySidebar"><br>
       <div class="w3-container">
         <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-xxlarge w3-padding w3-hover-grey" title="close menu">
           <i class="fa fa-remove"></i>
@@ -120,9 +119,9 @@
         <img src="pic/logg.png" style="width:45%;"><br><br>
       </div>
       <div class="w3-bar-block">
-        <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+        <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal "><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-envelope fa-fw w3-margin-right w3-text-white"></i>CONTACT</a>
       </div>
       <div class="w3-panel w3-large">
         <i class="fa fa-facebook-official w3-hover-opacity "></i>
@@ -142,7 +141,7 @@
   <header id="portfolio" class="w3-container w3-black">
     <a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-right  w3-hover-opacity w3-margin-top"></a>
 
-    <a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-left w3-hover-opacity w3-margin-top"></a>
+    <!--<a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-left w3-hover-opacity w3-margin-top"></a> -->
 
 
 
