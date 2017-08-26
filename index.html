@@ -84,7 +84,7 @@
 
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 280px) {
-    .text {font-size: 11px}
+    .slidetext {font-size: 11px}
   }
 
   .bgc {
@@ -116,22 +116,22 @@
     <nav class="w3-sidebar w3-collapse w3-white w3-animate-left bgc " style="z-index:3;width:100%;" id="mySidebar"><br>
       <div class="w3-container">
         <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-padding w3-hover-grey" title="close menu">
-          <i class="material-icons w3-xxlarge"> close </i>
+          <i class="material-icons w3-xxlarge" style="color: white" > close </i>
         </a>
         <img src="pic/logg.png" style="width:25%;"><br><br>
       </div>
       <div class="w3-bar-block">
-        <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal "><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+        <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal "><i class="fa fa-th-large fa-fw w3-margin-right"></i>HOME</a> 
         <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
         <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-white"><i class="fa fa-envelope fa-fw w3-margin-right w3-text-white"></i>CONTACT</a>
       </div>
-      <div class="w3-panel w3-large">
-        <i class="fa fa-facebook-official w3-hover-opacity "></i>
-        <i class="fa fa-instagram w3-hover-opacity w3-margin-left"></i>
-        <i class="fa fa-snapchat w3-hover-opacity w3-margin-left"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity w3-margin-left"></i>
-        <i class="fa fa-twitter w3-hover-opacity w3-margin-left"></i>
-        <i class="fa fa-linkedin w3-hover-opacity w3-margin-left"></i>
+      <div class="w3-panel w3-large" >
+        <i class="fa fa-facebook-official w3-hover-opacity " style="color: white"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-margin-left" style="color: white"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-margin-left" style="color: white"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-margin-left" style="color: white"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-margin-left" style="color: white"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-margin-left" style="color: white"></i>
       </div>
     </nav>
   </div>
@@ -141,33 +141,33 @@
 
   <!-- Header -->
   <div class="w3-top">
-  <div class="w3-bar w3-black w3-wide w3-padding w3-card-2">
+    <div class="w3-bar w3-black w3-wide w3-padding w3-card-2">
 
-    <a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-right w3-hide-large w3-hover-opacity"></a>
+      <a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-right w3-hide-large w3-hover-opacity"></a>
 
-    <a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-left w3-hover-opacity w3-hide-small w3-hide-medium">
+      <a href="#"><img src="pic/logg.png"  style="width:65px; " class=" w3-left w3-hover-opacity w3-hide-small w3-hide-medium">
 
-     <span class="w3-button w3-hide-large w3-medium w3-hover-text-grey w3-left" onclick="w3_open()"><i class="material-icons"> menu</i></span></a>
+       <span class="w3-button w3-hide-large w3-medium w3-hover-text-grey w3-left" onclick="w3_open()"><i class="material-icons"> menu</i></span></a>
 
-        <div class="w3-center">
-                <a href="#home" class="w3-button w3-hide-large " style="font-family: 'Cinzel', serif;font-size: 16px;"><b>Foss Crunch</b> </a>
-
-
-          
-        </div>
-                <a href="#home" class="w3-button w3-hide-small w3-hide-medium" style="font-family: 'Cinzel', serif;font-size: 20px; font-style: bold;"><b>Foss Crunch</b> </a>
+       <div class="w3-center">
+        <a href="#home" class="w3-button w3-hide-large " style="font-family: 'Cinzel', serif;font-size: 16px;"><b>Foss Crunch</b> </a>
 
 
 
-    
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small w3-hide-medium">
-      <a href="#projects" class="w3-bar-item w3-button">Home</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
+      <a href="#home" class="w3-button w3-hide-small w3-hide-medium" style="font-family: 'Cinzel', serif;font-size: 20px; font-style: bold;"><b>Foss Crunch</b> </a>
+
+
+
+
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small w3-hide-medium">
+        <a href="#projects" class="w3-bar-item w3-button">Home</a>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
     </div>
   </div>
-</div>
 
 
  <!-- <header id="portfolio" class="w3-container w3-white">
@@ -256,10 +256,10 @@
         </div>
       </div>
 
- 
-  
 
- 
+
+
+
 
 
       <!-- Second Photo Grid-->
